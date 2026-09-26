@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Netflix | Análisis del catálogo</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Estilos del proyecto -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Google Charts -->
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <!-- JavaScript de las visualizaciones -->
+    <script src="js/desafio2.js" defer></script>
+    <script src="js/desafio3.js" defer></script>
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+
+            <a class="navbar-brand marca" href="#">
+                NETFLIX | DATA
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal"
+                aria-expanded="false"
+                aria-label="Abrir menú">
+
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse"
+                 id="menuPrincipal">
+
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="#desafio1">
+                        Contenido
+                    </a>
+                    <a class="nav-link" href="#desafio2">
+                        Evolución
+                    </a>
+                    <a class="nav-link" href="#desafio3">
+                        Países
+                    </a>
+                    <a class="nav-link" href="#desafio4">
+                        Géneros
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Encabezado -->
+    <header class="encabezado">
+        <div class="container">
+
+            <span class="etiqueta">
+                ANÁLISIS DEL CATÁLOGO
+            </span>
+
+            <h1>Netflix: más allá de la pantalla</h1>
+
+            <p class="descripcion-encabezado">
+                Una exploración interactiva del contenido
+                disponible en Netflix hasta septiembre de 2021.
+            </p>
+
+            <a href="#desafio1"
+               class="btn btn-danger mt-3">
+                Explorar los datos
+            </a>
+
+        </div>
+    </header>
+
+    <!-- Visualizaciones -->
+    <main class="container py-5">
+
+        <!-- Desafío 1 -->
+        <section id="desafio1" class="seccion-grafico">
+
+            <h2>Películas vs. series</h2>
+
+            <p>
+                Distribución del catálogo según el tipo
+                de contenido.
+            </p>
+
+            <div id="grafico-tipos"
+                 class="contenedor-grafico">
+            </div>
+
+        </section>
+
+        <!-- Desafío 2 -->
+        <section id="desafio2" class="seccion-grafico">
+
+            <h2>Evolución anual del catálogo</h2>
+
+            <p>
+                Cantidad de películas y series incorporadas
+                a Netflix por año.
+            </p>
+
+            <div id="grafico-evolucion"
+                 class="contenedor-grafico">
+            </div>
+
+            <p class="nota">
+                Los datos de 2021 incluyen incorporaciones
+                hasta el 25 de septiembre.
+            </p>
+
+        </section>
+
+        <!-- Desafío 3 -->
+        <section id="desafio3" class="seccion-grafico">
+
+            <h2>Principales países productores</h2>
+
+            <p>
+                Países con mayor cantidad de títulos
+                disponibles en el catálogo.
+            </p>
+
+            <div class="mb-4">
+                <label for="filtro-paises"
+                       class="form-label">
+                    Seleccionar ranking:
+                </label>
+
+                <select id="filtro-paises"
+                        class="form-select selector-ranking">
+
+                    <option value="3">Top 3</option>
+                    <option value="5">Top 5</option>
+                    <option value="10" selected>
+                        Top 10
+                    </option>
+
+                </select>
+            </div>
+
+            <div id="grafico-paises"
+                 class="contenedor-grafico">
+            </div>
+
+            <p class="nota">
+                El análisis incluye 7.976 títulos con información
+                del país de producción. Las coproducciones se
+                contabilizaron una vez por cada país participante.
+                Los porcentajes se calcularon respecto al total
+                de títulos con información geográfica disponible.
+            </p>
+
+        </section>
+
+        <!-- Desafío 4 -->
+        <section id="desafio4" class="seccion-grafico">
+
+            <h2>Géneros más representativos</h2>
+
+            <p>
+                Distribución de las categorías del catálogo
+                según el tipo de contenido.
+            </p>
+
+            <div id="grafico-generos"
+                 class="contenedor-grafico">
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="bg-dark text-white-50 text-center py-4">
+        <p class="mb-0">
+            Visualización de datos
+        </p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+    <!-- Visualizaciones de Google Charts -->
+    <script src="JavaScript/desafio2.js"></script>
+    <script src="JavaScript/desafio3.js"></script>
+
+    <!-- Inicialización del dashboard -->
+    <script src="JavaScript/main.js"></script>
+
+</body>
+</html>
